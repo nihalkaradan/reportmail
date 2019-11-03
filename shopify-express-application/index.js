@@ -35,6 +35,7 @@ app.get('/shopify', (req, res) => {
 
 //after app is installed this endpoint gets hit 
 app.get('/shopify/callback', (req, res) => {
+	
   const { shop, hmac, code, state } = req.query;
   const stateCookie = cookie.parse(req.headers.cookie).state;
 
